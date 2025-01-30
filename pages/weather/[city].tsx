@@ -1,4 +1,3 @@
-import { ErrorComponent } from "@/components/LoadingComponent";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoadingComponent } from "../../src/components/LoadingComponent";
@@ -13,6 +12,7 @@ export default function CityWeather() {
   const [unit, setUnit] = useState<"C" | "F">("C");
 
   const convertTemp = (temp: number) => {
+    // Explicit number type
     return unit === "C" ? temp : (temp * 9) / 5 + 32;
   };
 
@@ -22,6 +22,7 @@ export default function CityWeather() {
         try {
           await dispatch(fetchWeather(city as string)).unwrap();
         } catch (error) {
+          console.error(error);
           // Error handled by Redux
         }
       }
@@ -81,7 +82,7 @@ export default function CityWeather() {
         <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-2xl p-6 mb-8 text-center">
           <p className="text-sm mb-2">Current Temperature</p>
           <div className="text-6xl font-bold">
-            {Math.round(convertTemp(data?.main?.temp))}°{unit}
+            {Math.round(convertTemp(data?.main?.temp ?? 0))}°{unit}
           </div>
         </div>
 
@@ -90,20 +91,20 @@ export default function CityWeather() {
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/30 transition-all">
             <p className="text-gray-600 mb-1">Humidity</p>
             <p className="text-2xl font-bold text-gray-800">
-              {data?.main?.humidity}%
+              {data?.main?.humidity ?? "--"}%
             </p>
           </div>
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/30 transition-all">
             <p className="text-gray-600 mb-1">Wind Speed</p>
             <p className="text-2xl font-bold text-gray-800">
-              {data?.wind?.speed} m/s
+              {data?.wind?.speed ?? "--"} m/s
             </p>
           </div>
           {/* feels like card */}
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
             <p className="text-gray-600 mb-1">Feels Like</p>
             <p className="text-2xl font-bold text-gray-800">
-              {Math.round(convertTemp(data?.main?.feels_like))}°{unit}
+              {Math.round(convertTemp(data?.main?.feels_like ?? 0))}°{unit}
             </p>
           </div>
         </div>
