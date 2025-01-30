@@ -1,4 +1,3 @@
-import { ErrorComponent } from "@/components/LoadingComponent";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoadingComponent } from "../../src/components/LoadingComponent";
@@ -22,6 +21,7 @@ export default function CityWeather() {
         try {
           await dispatch(fetchWeather(city as string)).unwrap();
         } catch (error) {
+          console.error(error);
           // Error handled by Redux
         }
       }
