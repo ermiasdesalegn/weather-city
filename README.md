@@ -6,7 +6,7 @@
 
 A weather dashboard built with Next.js and Redux Toolkit that fulfills all requirements of the internship challenge, featuring real-time weather data, elegant UI, and robust error handling.
 
-**Live Demo:** [https://weather-dashboard-internship.vercel.app/](https://your-deployment-link.com)
+**Live Demo:** [https://weather-city-eosin.vercel.app/](https://weather-city-eosin.vercel.app/)
 
 ## ✅ Challenge Requirements Implementation
 
