@@ -6,12 +6,13 @@
 
 A weather dashboard built with Next.js and Redux Toolkit that fulfills all requirements of the internship challenge, featuring real-time weather data, elegant UI, and robust error handling.
 
-**Live Demo:** [https://weather-city-eosin.vercel.app/](https://weather-city-eosin.vercel.app/)
+**Live Demo:** [https://weather-dashboard-internship.vercel.app/](https://weather-city-eosin.vercel.app/)
 
 ## ✅ Challenge Requirements Implementation
 
 ### Core Requirements Met
 
+``git
 | Feature | Implementation Details |
 |---------|------------------------|
 | **Homepage Search** | - Search bar with city input <br> - Redux-managed search state <br> - Responsive design with Tailwind CSS |
@@ -20,6 +21,7 @@ A weather dashboard built with Next.js and Redux Toolkit that fulfills all requi
 | **API Integration** | - OpenWeather Current Weather API <br> - Axios HTTP client <br> - Error handling for 404/500 responses |
 | **Styling** | - Tailwind CSS with custom animations <br> - Glassmorphism design system <br> - Mobile-first responsive layout |
 | **Error Handling** | - Invalid city detection <br> - Network error handling <br> - Visual error components with retry action |
+``git
 
 ### Bonus Features Implemented
 
@@ -52,9 +54,10 @@ Framework: Next.js 13
 . HTTP Client: Axios
 . Type Checking: TypeScript
 
-``git
-📂 Project Structure
-UI Components: Custom animated SVG elements
+## 📂 Project Structure
+
+```plaintext
+your-project-root/
 ├── store/
 │   ├── store.ts          # Redux store configuration
 │   └── weatherSlice.ts   # Weather state management
@@ -66,7 +69,7 @@ UI Components: Custom animated SVG elements
 │   └── LoadingComponent.tsx # Animated spinner
 ├── services/             # API service layer
 └── public/               # Static assets
-``git
+
 
 🔍 Key Implementation Highlights
 1. Efficient State Management
