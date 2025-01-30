@@ -1,7 +1,7 @@
+import { ErrorComponent } from "@/components/ErrorComponent";
 import { LoadingComponent } from "@/components/LoadingComponent";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { ErrorComponent } from "../src/components/ErrorComponent";
 import { useAppDispatch, useAppSelector } from "../store/store"; // Updated import
 import { fetchWeather } from "../store/weatherSlice";
 
