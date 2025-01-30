@@ -5,3 +5,14 @@
 .spinner-style {
   @apply h-24 w-24 border-y-transparent rounded-[50%] border-x-blue-400 border-solid border-[6px] animate-spin;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

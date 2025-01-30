@@ -1,4 +1,4 @@
-import { ErrorComponent } from "@/components/LoadingComponents";
+import { ErrorComponent } from "@/components/LoadingComponent";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoadingComponent } from "../../src/components/LoadingComponent";
