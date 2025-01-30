@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.spinner-style {
+  @apply h-24 w-24 border-y-transparent rounded-[50%] border-x-blue-400 border-solid border-[6px] animate-spin;
+}
