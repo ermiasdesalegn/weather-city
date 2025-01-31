@@ -39,7 +39,7 @@ A weather dashboard built with Next.js and Redux Toolkit that fulfills all requi
 ## 🚀 Installation
 
 1. Clone repository:
-git clone https://github.com/your-username/weather-dashboard.git
+https://github.com/ermiasdesalegn/weather-city.git
 2. Install dependencies:
 npm install
 3. Create .env.local file:
